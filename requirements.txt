@@ -1,1 +1,7 @@
 pymupdf
+csv
+sys
+matplotlib
+fitz
+pandas
+numpy
