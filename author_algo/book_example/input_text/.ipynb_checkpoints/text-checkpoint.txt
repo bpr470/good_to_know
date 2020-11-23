@@ -1,0 +1,275 @@
+Twitter recently came under fire due to structural bias in their cropping algorithm used to crop photos for the Twitter feed. Twitter optimizes the cropping of images displayed on the feed so that what the thumbnail version of a photo is assumed to be the most interesting part of the picture. Unfortunately, the algorithm seemed to focus on white faces over black faces consistently when executing the cropping. This consistent choice shows that there was bias built into the algorithm that Twitter had not yet addressed.
+
+YINA MOE-LANGE | PRODUCT MANAGER | OCTOBER | 2020
+
+This is not the first time we’ve seen bias reflected in AI model outcomes, but in this instance the situation was a bit different than usual. The cropping algorithm was not based on a facial recognition algorithm, but rather Twitter was using a saliency prediction algorithm.
+
+SALIENCY PREDICTION
+In short, saliency prediction is a model that predicts where on an image, your eyes will fixate. A saliency model will create a saliency map, which is a grey-scale pixel map of an image that shows the original image’s visual attention attributes. The “interesting” areas of an image will appear lighter on the scale, and the less “interesting” areas will appear darker. Saliency mapping and prediction are useful across many diverse applications, including robotics for object detection and customer attention marketing.
+
+Now, back to the Twitter dilemma. This isn’t a case of the training data not representing the population or the presence of bias. Instead, the bias here was a byproduct of engineering, making it a structural and systemic issue. It’s clear this system wasn’t intended to be biased, but when nobody verified it for bias, it continues to perpetuate the issue, and that is a problem that needs to be addressed.
+
+A key concern is that this kind of structural bias may show up in the results of other algorithms and approaches that we have not yet caught. This issue highlights the importance of testing and monitoring the inputs and outputs of the various models we put into production.
+
+NO EASY FIXES
+A major challenge with this structural bias is that there is no quick fix.
+
+Twitter has decided to update how it crops the photos uploaded to the Twitter feed, mainly moving away from auto-cropping. It’s good to give the user back some control over the cropping, but it also shows that teaching the ML algorithm to be unbiased is a larger problem to be solved. It’s true that AI is not always the right choice, and in this situation, the fix of an ML problem was to remove it and let humans do the job.
+
+It is always important to weigh the decision to implement AI solutions. It is essential to ensure that the technology implemented is ready and that the task isn’t better off in humans’ hands until it is up to par with the standards we expect. At 2021.AI, Impact Assessments are one way we apply more human oversight into the AI model process to help structure a process in which the expectations, implications, and potential outcomes are weighed during the development and deployment of an AI algorithm. 
+Every day, more and more decisions are made across the enterprise, and many of these decisions are made by algorithms within AI systems. Humans can unconsciously bring biases into their decision-making, and we must ensure that these are not reflected or further emphasized in our AI decision-making process. AI has the potential to help reduce unfair biases and help us ensure responsibility in our decision making to avoid disparate impacts.
+
+YINA MOE-LANGE | PRODUCT MANAGER | OCTOBER | 2020
+
+WHAT IS A DISPARATE IMPACT?
+Biases can be both intentional and unintentional, so we need to understand where they may pop up. One example of unintentional bias is commonly shown through disparate impact (also known as indirect discrimination). Disparate impact is when policies, rules, and outcomes disproportionately impact a specific group of individuals, though there are no underlying intentions to do so. Unintentional bias is particularly important to address as it can be quite harmful to different groups of people in our society.
+
+UNINTENTIONAL PROXY DISCRIMINATION
+An example where there has been a long history of bias is within the financial services industry, specifically within the determination of creditworthiness. It is essential for financial institutions to determine consumer risk when pricing their financial service, many times looking deep into their customers’ history. Many countries and jurisdictions have laws that prevent financial institutions from basing their pricing policies on certain characteristics (race, gender, age, marital status, etc.). While the algorithm might not be using a gender variable directly in its decision-making process, it can still use gender proxies. A proxy for gender could be found in a person’s purchasing history, for example, the type of deodorant or razors purchased. Unintentional proxy discrimination should be monitored in these systems as well.
+
+AI has the potential to help us to detect and correct these biases. Disparate impact can be addressed through disparate impact assessments and fairness assessments. Fairness can be challenging to define, so it is important to decide on different fairness metrics and standards for each AI project implemented.
+
+REGULATORY ADHERENCE
+Addressing disparate impact and fairness is not only the right thing to do but is also essential in terms of regulatory adherence. Having a system in place that helps ensure you meet regulatory requirements can help with both reputational and business risks in the short and long term. It is essential to highlight the principal role of human involvement in the AI process. We are in a unique position to understand the nuances of the outcomes, the data collection process, and other steps in the AI model process. By working in tandem with the algorithms, there is a lower chance of bias making it through the system.
+
+TOOLS & IMPACT ASSESSMENTS
+There are several top of the line open-source libraries that help assess and evaluate the presence and level of different biases in your models. At 2021.AI, we’ve implemented several of the best open source libraries into our Grace AI platform. We want our clients to have options and pick the best one for what they are looking for. We think you should have access to state-of-the-art tools that are benchmarks in the AI ecosystem. A sample of the libraries we work with on the Grace AI platform include:
+
+IBM’s AI Fairness 360 (AIF360)
+InterpretML
+Microsoft’s Fairlearn
+Impact Assessments are one way we, at 2021.AI, are introducing more human oversight into the AI model process. They can help structure a process in which the expectations, implications, and potential outcomes are weighed during the development and deployment of an AI model. Asking a different set of questions depending on the AI model and data used can ensure a more transparent process and ensure that the project leaders are assessing and checking in at each stage of the model development and deployment process.
+
+Combining the fairness tools with Impact Assessments can give a transparent overview of the AI models and their outcomes. Through informative questions and data pulled directly from the model outcomes, answers can be scaled and weighted to produce a multi-layered score. This combination can help make sure that a model’s goals line up with the outcome of the model. Measuring and analyzing the bias in models leads to greater accountability, which is a key element in more responsible decision making.
+
+Being able to qualify and understand the presence of bias in your models and outcomes is the first step to reducing indirect discrimination. This removes one of the barriers to accountability and scrutiny of algorithms that can be difficult to carry out when working with opaque, “black box” style tools. Not only is it important to meet regulatory requirements, but having an unbiased and fair model can be better for business and ensure that you are optimizing your products more efficiently.
+
+Bias in AI is and remains an increasing phenomenon. To overcome bias, you need to apply the aspect of fairness. This article will examine the legal frame, looking into specific nuances of fairness in AI. It is not an exhaustive analysis, but rather an entry point to a complex problem with plenty of opportunities and challenges.
+
+MIKAEL MUNCK, FOUNDER & CEO, AND AGNES ANTCZAK, MARKETING MANAGER, 2021.AI | OCTOBER | 2020
+
+The fairness of AI algorithms is a growing field of research that arises from the general need for decisions to be free from bias and discrimination. Fairness also applies to AI-based decision tools, where the European White Paper on AI provides a framework in which AI or algorithmic decision-making needs to be carefully considered.
+
+For the sake of simplicity, let us use a hypothetical case: an AI model used by a bank to predict whether or not an individual will receive a loan based on the risk of default. Some critical elements in the European White Paper on AI play together when this type of AI model assesses an individual, namely: the person’s rights not to be subject to an automated decision in the first place, their right to get an explanation of the decision, and their right to non-discrimination.
+
+This frame requires AI practitioners to produce models and workflows that – by design – take care of possible discrimination (fairness), are explainable to the user with a high degree of clarity (interpretability), and are reproducible through the whole AI model workflow (transparency). Examples of research efforts and products in this direction can be found at Google and IBM (see references).
+
+In the described scenario, it is necessary to consider different definitions of fairness to evaluate the decision, and one would need adequate information about the AI model to analyze it. In this case, a set of questions can help highlight some aspects of fairness and its importance without the specifics.
+
+WILL EXCLUDING THE INDIVIDUAL’S PROTECTED ATTRIBUTES AVOID DISCRIMINATION?
+An individual’s protected attributes include demographics such as sex, race, ethnic or social origin, genetic features, language, religion or belief, political opinion, disability, age, sexual orientation, and so on. It is straightforward to see that a decision based on only one of those features is indeed discriminatory. However, eliminating them from the analysis does not offer a solution. In our bank loan case, assume that these features are excluded, but the person’s home postal code is used instead. In a neighborhood where almost all residents belong to a single group (e.g., single ethnicity), an algorithm trained with the postal code could make decisions informed by group membership. Additionally, other groups located in the same geographic region (postal code) can risk misestimation if there is no other characteristic that can differentiate them.
+
+Excluding an individual’s protected attributes is not enough to guarantee the equity of the decision and, moreover, might be the key to algorithm analysis.
+
+IS MODEL EXPLAINABILITY ENOUGH?
+Now consider the case in which the bank omits some personal attributes that differentiate a specific individual/minority with low risk of default, e.g., good credit history. They decide to use coarse characteristics that are not traceable to the individual, like postal code. In a neighborhood that historically and on average has more unpaid or defaulted loans than other neighborhoods, minorities will likely have their risk overestimated (represented by the postal code in a high-risk neighborhood). Moreover, this will not be perceptible if the data used is unavailable, and the variables that can differentiate the individual/minority from the coarse group are not present in the data.
+
+DO LARGE AMOUNTS OF DATA HELP GUARANTEE NON-DISCRIMINATION?
+AI models are built on data that exhibits the biases in past decisions, and therefore the data used for training greatly influences the outcome. Typically a case-by-case analysis is required to avoid potential shortcomings.
+
+WHAT ACTIONS CAN I TAKE TO ENSURE FAIRNESS IN AI MODELS?
+All organizations considering AI should start with a holistic view of both data and AI models. In such a view, governance is a key component. To avoid discrimination or bias in outcomes, consider validating your data by implementing an AI Platform. A platform also provides validated fairness and transparency. It is one thing to say that an AI practice is fair or ethical, and another to prove it. When your transparency is validated, there is a trace of the actual events that occur, and you can easily answer the question, “how did you do that?”
+
+A platform will monitor AI models in the development and deployment stages, and only in an AI platform with AI Governance support, can you fully validate and document model processes to ensure that they meet the requirements under AI regulations. 
+
+There is no doubt that AI is a game-changer. Both when it comes to how we live and work. However, for many organizations and companies, the greatest challenge is understanding the full impact that AI will have on how we think about and design how we will work in the future.
+
+NATASHA FRIIS SAXBERG | CEO, THE DANISH ICT INDUSTRY ASSOCIATION | OCTOBER | 2020
+
+Let us look at an example of a workflow that has been disrupted by AI. Audit sampling. The traditional workflow involves extracting a set number of samples and going through these to assess the information’s accuracy overall. But in a digitalized world with AI, it is redundant to take samples as the time and cost of reviewing the entire data set is no longer an issue.
+
+Not only does AI expand the scope of what is possible in many areas. It also demands new human skills and redefines how we work. In my view, it calls for a new work contract between humans and technologies.
+
+COLLABORATIVE AI
+If we continue to design our way of working to fit human workflows invented in the last century, we will not take advantage of technologies’ full potential, such as AI. It’s not about replacing humans. Instead, it’s about taking full advantage of new technologies’ possibilities and combining them with human competencies. Just think of robots in production lines and automated processes.
+
+To stay competitive, AI solutions are becoming ever more vital in most companies. Research presented in Harvard Business Review states that three out of four executives believe that if they don’t scale AI in the next five years, they risk going out of business entirely.
+
+Thus, we need to take our human capabilities and work-life to an even higher level by letting technology work in scale with all its intelligence. In other words, we need to design a new way of working centered on collaborative AI and the problems we want to solve – rather than how we used to solve it.
+
+This is no easy task. To reinvent how we work and, even harder, how we think about problem-solving. Denmark is known for its ability to collaborate and its ethical approach to AI. We need both when designing an attractive work-life for the future.
+
+Most blogs, papers, and articles within the field of AI start by explaining what AI is. I will assume that the reader of this piece knows more about AI than what would be possible to put into one paragraph, but for the sake of completeness, I will refer to AI as a statistical model which will recognize patterns in data to make predictions. This blog will look more specifically into explainable AI.
+
+BJÖRN PREUSS | SENIOR DATA SCIENTIST | SEPTEMBER | 2020
+
+The first step that executives seek when using AI is to solve meaningful business problems. In order to fulfill this step, a data scientist often aims to produce the best possible model to make an accurate prediction. So far, so good. At the end of the process is a model that delivers satisfactory prediction results relating to the said business problem. It seems simple enough, but there is more to it. Having a prediction is often just one part of what the end-user asks for. The second question will always be “why?” and just like a child who always asks “why?” this question needs to be addressed.
+
+THE NEED FOR EXPLAINABLE AI
+Over the last years, we have seen a rising quest for AI explainability (in machine learning, deep-learning, NLP, etc.) Business owners, end-users, and even regulators continue asking for more explainable models.
+
+The reasons for the AI explainability craze are diverse. Some want to have control over the models and test them based on gut feelings. This quest is often raised by business owners or even data scientists themselves during building stages. One has to compare predictions with the reality (split test) and check whether the reasons for the prediction make sense. For example, a text routing model that always sends texts to one user when the text is converted from word does not make sense. The routing should usually be based on the content.
+
+ERADICATE UNETHICAL PREDICTIONS AND DECISION MAKING
+Another need for AI explainability is to mitigate the risk of false or unethical predictions/decisions. This request often comes from internal or external regulators, but might also be on the board’s agenda. As seen during the last two years, regulatory bodies such as the EU commission and national organizations have released ethical AI guidance and recommendations. These guidelines often include a quest for transparency and explainable models. One has to be able to say why a model has made a specific decision. In finance, where statistical credit rating and risk models have been standard for decades, this is not new. All current models running in production (whether AI or statistics) need to be explainable. If not, most FSAs would not allow institutions to use them. This proves that model explainability is a must to harvest the value from AI in an organization fully.
+
+In the next two paragraphs, I want to give the reader a short and non-technical overview of what type of AI explainability is possible so far.
+
+THE POSSIBILITIES WITH AI EXPLAINABILITY
+The first group is direct explainability. Models in this mathematics can be explained very easily. For example, direct explainability is the case for OLS regressions, which are common in economics and is what most readers might be familiar with or have at least heard of during their studies. Other models, where predictions can be directly explained, are decision tree models. Here the notes and breakpoints can be presented as a graphical tree (see figure 1).
+
+Explainable AI (XAI) - Example decision tree animal classification
+
+Figure 1. Example decision tree animal classification
+
+When defining directly explainable model types, it is essential to address those not directly explainable. These types of models are usually more complex, such as neural networks or boosted tree models. Both model types are applied to complex problems such as image recognition and are often referred to as black-box models. With this type, it is clear that the model made correct predictions like correctly detecting damage to a car, for example. However, with black-box models, it can be unclear as to why a prediction is made. Going back to the car example, the prediction for damage should be because of actual damage on an image, not because the card was red.
+
+Recent research shows that the data science community has overcome some of the problems and released frameworks that bring light to these models. Depending on the application, python libraries such as [SHAP; LIME; Gradcam; eli5; etc.] give us a hint on variable impact. These frameworks are often model neutral and can be used for standardization. They furthermore allow data scientists to deliver reasons for each prediction. So, If you were to ask a model about the value of your house, it will tell you, for example, 400.000 EUR and the reason is the home’s location in a quiet area with a garden, etc.
+
+A UNIQUE ROLE PLAY FRAMEWORK THAT TESTS FOR BIAS
+One prominent example is [AI Fairness 360] from IBM. These frameworks aim to test whether certain critical variables, such as gender, have a significant impact on the model and lead to differing results. There is much more to this field, and it is a growing and complex area. I just wanted to name it for the sake of completeness but without going too much into detail.
+
+In conclusion, we can say that with the named model explainability frameworks, we can: standardize code, explain the overall model for a sanity check, check for bias, explain the reason for each prediction and, with this, give the end-user an answer to his/her question, but also use this to document for regulators and risk managers answering why a model has done sth. The ability to deliver such insights might even increase the value of the model. Hence, one could think about additional analysis based on the most critical factors, for example, to improve customer loyalty when using a churn model.
+
+ 2021.AI’s Grace Enterprise AI Platform provides an easy way for companies or 
+
+governments to create tangible metrics for fairness, transparency, and explainable AI. We link these metrics to your impact and risk assessments, and effectively measure these metrics continuously, while automatically restricting model behavior.
+
+Technology developers cannot predict the future, but they will have to look into the crystal ball of tomorrow to build technology that accounts for long-term social impact. In the Confederation of Danish Industry, we will help guide this anticipation. To do so, we are developing a labeling scheme for IT security and responsible data use in collaboration with The Danish Chamber of Commerce, SMEdenmark, and the Danish Consumer Council. The purpose is to make ethical AI the Danish position of strength.
+
+CHRISTIAN HANNIBAL | CEO OF THE DANISH ICT AND ELECTRONICS FEDERATION | AUGUST | 2020
+
+WHAT IS FAIRNESS?
+The concepts of ”ethical” and “unethical” are complicated to define and even harder to measure. In addition, the unfair bias in algorithms is a well-known example of unethical AI. However, fairness is subjective and can differ from person to person and change in relation to the situation. For instance, implementing AI for decision-making in the healthcare sector is an example of how an AI application can treat genders differently. Some diagnoses are more likely to occur for women than men and vice versa, and this type of decision-making can be fair and ethical. Whereas favoring persons during the hiring process based on gender is discriminating and unethical.
+
+Nevertheless, humans are not the golden standard for decision making. We all contain bias (conscious and unconscious). But we need to have higher expectations for AI, especially in human decision-making.
+
+Another dimension worth looking into is the level of impact. We need to distinguish between levels of impact and risk. The earlier mentioned example of AI in healthcare can contain both high and low risk. AI in diagnosis and decision support has a high impact on human lives. Though implementing AI in employee planning for healthcare professionals will have little effect on human beings, it’s important to distinguish between levels of risk and not distinguish between ,e.g., sectors.
+
+THE DANISH LABELING SCHEME FOR IT SECURITY AND RESPONSIBLE DATA USE
+Why is the Danish labeling scheme for IT security and responsible data use a step forward in reaching ethical AI? We believe that the key to ethical AI is to make trustworthy AI, and to do so, we need to make clear and measurable guidelines for AI developers and buyers.
+
+The labeling scheme will address ethical questions by offering companies a clear framework for ethical AI. The aim is to create trustworthy algorithms that are human-centric. In these frameworks, the providers and developers are taking responsibility to secure transparency and explainability (XAI) as well as high model and data quality.
+
+Human-centric means that data scientists and other AI developers should make a human impact assessment involving all relevant stakeholders. Transparency is the core of how AI applications should be developed. We need to avoid black boxes. AI developers must be able to explain how the AI application is developed, which models and data have been used, and the reasons behind using them. So, what’s the purpose? There is no need to implement AI just for the sake of it.
+
+THE DANISH WAY
+The hope is to make trustworthy AI the Danish position of strength. Danish citizens are known to have high trust in their authorities and country. Thus, it is only natural that we develop the key standard for trustworthy and ethical AI. We should foster the perception and share our experiences and learnings with the rest of Europe. AI applications can make an incredible impact and result, but only if we take responsibility and make ethical standards.
+
+In the Confederation of Danish Industry, we believe that a labeling scheme for IT security and responsible data use is an excellent start on the ethical AI journey and a solution to how Denmark, and Europe, can compete with other markets. Using AI for good is not a burden. It is a way of making us competitive commercially as well as ethically.
+
+In recent years, AI has evolved from science fiction to part of our everyday lives. Emerging tech is on the cusp of revolutionizing global value chains. Shaping a “new corporate tomorrow” is already taking place, and the ethical issues related to AI have been laid out in numerous executive debates. To secure democratic values and a high standard of transparency, we must take AI Ethics to the next level: AI Policy. History shows that policy and lawmaking do the trick when it comes to protecting liberty, democratic values, and human rights.
+
+KATHRINE STAMPE ANDERSEN | MEMBER OF THE BOARD OF DIRECTORS, 2021.AI | AUGUST | 2020
+
+The history of mankind is a history of various political entities created by the human race. Throughout history, great policy thinkers have expanded basic self-ruling systems into monarchies, and towards the democracies we know today that guarantee civil liberties. The ancient Greeks. The Age of Enlightenment. The French Revolution. The American Dream stated in the Declaration of Independence. Again and again, history shows the impact of fighting for rights, transparency, and fact-based decisions.
+
+THE CONNECTION BETWEEN AI AND POLICYMAKING
+Although historians primarily emphasize the importance of understanding societal issues in a historical context, tech executives know there is a timeless connection between policymaking from the great past and the future. In a future AI world fueled by big data, human rights and individual liberties have never been more important principles to reclaim. We need to govern the hidden impact of AI.
+
+When Thomas Jefferson (1776) proposed a philosophy of human rights to all people in the Declaration of Independence, he claimed that… “all men are created equal, they are endowed by their creator with certain unalienable rights, that among these are life, liberty and the pursuit of happiness.” The Declaration of Independence was a vital part of democratic policy – and lawmaking because it contained universal human rights and the ideals and goals of an entire nation. Policymaking mattered in people’s everyday life!
+
+Going forward, emerging technologies such as robotics, 5G & 6G, IoT, algorithms, etc. hold high power in solving some of the future world’s most complicated problems that we also face today. Artificial Intelligence can already assist human beings in the battle for thwarting climate change by, for example, providing better water predictions, developing smart products for smart homes, smart thermostats to regulate energy consumption, conserve water, etc. AI is already helping us fight the viral pandemic, Covid19, by helping us understand the virus and accelerate medical research on drugs and treatment, detect and diagnose the virus, predict its evolution, and help prevent and slow the spread through surveillance, and contact tracing.
+
+NEW TECHNOLOGIES POSE NEW RISKS
+But artificial Intelligence also poses new risks for human rights concerning discrimination, surveillance, transparency, privacy, security, freedom of expression, the right to work, and access to public services. AI brings novel ethical challenges to the table that threatens human rights for its users and non-users. We are facing a post-modern version of history.
+
+Hence, a countless list of ethical guidelines and corporate strategies within organizations to address the issues of 1) transparency of AI algorithms 2) bias/fairness of AI/ML algorithms resulting from the data/AI model training 3) risk assessment and a viable mechanism for uncovering ethical issues due to AI, etc.
+
+The big question now is whether corporate ethical guidelines will do the trick? Will high-level reflections and corporate guidelines be the right toolbox to govern the most powerful technology, fight the impact of shadow AI, and protect the individual making sure that Thomas Jefferson’s proposal on civil liberty will be reinforced along with AI transformation?
+
+POLICY FRAMEWORKS FOR THE FUTURE
+My answer is that we need to look into specific policy options to benefit from AI. World Economic Forum, UK Guidelines for AI Procurement, Danish principles for AI, and the Canadian AI Assessment Tool have inspired regulatory initiatives. Additionally, the American National Security Commission on AI recommends a Key Considerations Paradigm.
+
+However, European policymakers need to consider the following policy frameworks, of which some are already on the table. The cornerstone of the following centralized framework could, for example, address the shadows of AI:
+
+Mandatory requirement of a AI Certificate: AI Suppliers are required to hold a certificate to advance for a new governmental “Pre-Qualified AI-supplier list” supplying AI products, services, and operations to the Public Sector.
+Obliged Risk Assessment: Initiating a new governmental AI Risk Assessment Tool where any governmental entity uses a Risk Tool supervising, controlling and mitigating potential issues with the deployment of AI, ML and intelligent use of data.
+Standardized Data Dash-Board required for commercial data operators: Companies identified as ´data operators´ will provide each end-user with an assessment of the economic value that the commercial data operator places on the data of that end-user and additionally conveying the exact types of data that are being collected.
+Audited AI Accountability Report: All companies deploying AI/ML must address any ethical and human rights concerns regarding AI/ML and how to mitigate the concerns.
+
+On July 17, 2020, the High-Level Expert Group on Artificial Intelligence (AI HLEG) presented the final Assessment List for Trustworthy Artificial Intelligence (ALTAI). 2021.AI is honored to be on the front lines of ethical innovation in the EU, contributing as one of 50 selected companies engaged in an open workstream to provide best practices for the ALTAI final development.
+
+MIKAEL MUNCK, FOUNDER & CEO, AND NIKOLA MOJIC, PRODUCT MANAGER, 2021.AI | AUGUST | 2020
+
+WHAT IS ALTAI?
+The ALTAI helps foster responsible and sustainable AI innovation in Europe. It seeks to make ethics a core pillar for developing a unique approach to AI, aiming to benefit, empower, and protect both individual human flourishing and the common good of society. We believe that this will enable Europe and European organizations to position themselves as global leaders in cutting-edge AI worthy of our individual and collective trust.
+
+ALTAI - Assessment List for Trustworthy Artificial Intelligence (AI)
+
+Assessment List for Trustworthy Artificial Intelligence (ALTAI)
+
+These ambitions fit perfectly with 2021.AI’s company focus and beliefs, which is why we have greatly enjoyed collaborating on the EU’s initiative. The initiative is firmly grounded in the protection of people’s fundamental rights, which is used in the European Union to refer to human rights enshrined in the EU Treaties, the Charter of Fundamental Rights (the Charter), and international human rights law.
+
+GOAL OF ALTAI
+ALTAI aims to provide a basic evaluation process for Trustworthy AI self-evaluation. Organizations can draw elements relevant to the particular AI system from ALTAI or add elements to it as they see fit, considering the sector they operate in. ALTAI helps organizations understand what Trustworthy AI is, particularly what risks an AI system might generate and engender. It raises awareness of the potential impact of AI on society, the environment, consumers, workers, and citizens (specifically children and people belonging to marginalized groups). It also helps gain insight on whether meaningful and appropriate solutions or processes to accomplish adherence to the requirements are already in place (through internal guidelines, governance processes, etc.) or need to be put in place.
+
+CONCEPTS
+Trustworthy AI is defined by three complementary concepts: Lawful AI, Ethical AI, and Robust AI. The Guidelines have a human-centric approach to AI and identify 4 ethical principles and 7 requirements that companies should follow to achieve trustworthy AI. The document is complemented with a set of questions per each of the 7 requirements that aim to operationalize them (the “Assessment List”):
+
+Human Agency and Oversight: fundamental rights, human agency, and human oversight.
+Technical Robustness and Safety: resilience to attack and security, fallback plan and general safety, accuracy, reliability, and reproducibility.
+Privacy and Data Governance: respect for privacy, quality and integrity of data, and access to data.
+Transparency: traceability, explainability, communication.
+Diversity, Non-discrimination and Fairness: avoidance of unfair bias, accessibility and universal design.
+Societal and Environmental Well-being: sustainability and environmental friendliness, social impact, society and democracy.
+Accountability: auditability, minimization and reporting of negative impact, trade-offs and redress.
+
+When it comes to facial technology and its controversies, it is clear that something needs to be done. Applying facial recognition models to identify and track citizens and allowing apps that can recognize anyone ever to post a picture online is unacceptable. But can we keep this technology in check?
+
+RASMUS HAUCH | CTO | JULY | 2020
+
+THE ISSUES WITH FACIAL RECOGNITION TECHNOLOGY
+When used for good, facial recognition technology helps us log into our phones, go through passport control scanners at airports, or identify a single terrorist from the 1000 security cameras within a given city.
+
+Facial recognition technology becomes problematic when biometric profiles are built of every individual and used for mass surveillance, racial profiling, or violations of human rights and freedoms.
+
+In light of the recent protests worldwide, organizations like Amazon, IBM, and Microsoft have withheld selling these technologies to law enforcement, recognizing that citizens are subject to privacy erosion, bias, or at risk of being misidentified.
+
+FINDING A WAY FORWARD
+A ban on all facial recognition technology is not the solution. This will just spawn Shadow AI and make it impossible to use biometric technology for the good uses mentioned prior.
+
+To tackle the issues concerning facial recognition technology, we need laws and regulations governing its use, and we need them fast.
+
+At 2021.AI, we think governments around the world should start applying oversight and regulation to models using facial or other biometric technology, making sure that:
+
+Impact and Risk assessments are done for each use of such models, ensuring that technology is applied with the proper approvals and oversight.
+Security/GDPR in all aspects are maintained and respected.
+Source data is clearly versioned, and data governance is applied.
+Bias is clearly measured and monitored at each phase of the model development lifecycle.
+That external peer reviews have been done.
+That proper testing is executed.
+And that all of this is done on a detailed and continuous basis.
+
+2021.AI’s Grace Enterprise AI Platform provides an easy way for companies or governments to create tangible metrics for fairness, transparency, and explainable AI. We link these metrics to your impact and risk assessments, and effectively measure these metrics continuously, while automatically restricting model behavior.
+
+2021.AI effectively creates a turn-key solution to AI governance and compliance, that needs little work effort once applied to your project or model.
+
+Governments and multinational institutions are racing to create principals, laws, and regulations for artificial intelligence and machine learning. However, approach and focus generally diverge in multiple areas, and as a consequence, multinational organizations will need to consider how to manage multinational AI Governance.
+
+PETER SONDERGAARD | CHAIRMAN OF THE BOARD, 2021.AI | THE SONDERGAARD GROUP | MAY | 2020
+
+The challenge will be the inequitable speed of change, and the varying balance or focus countries adopt between, first protecting citizens, organizations, and society, secondly the need to foster innovation and competition and lastly, national security. The emphasis on these three elements will vary across the globe and will not remain constant either, as we iterate asymptotically towards a single global view of AI governance.
+
+We can learn from the evolution of data privacy policies and regulations and how data-as-a-business, has been implemented and is viewed across the globe. We can generally assume that the different government approaches to data privacy also will influence the path to AI regulation and laws.
+
+The US will be more weighted towards businesses, Europe (and Japan) more towards the protection of citizens and organizations, and China more weighted towards supporting national policy. As said, different country policies and regulations will tend to move asymptotically towards a single global view of AI governance.
+
+However, what likely may influence all three, will be national security interests and the assumption that artificial intelligence (together with technologies like Quantum Computing) constitute a vital national interest. National security interests may cause fragmentation of certain aspects of AI and ML, including policy and legislation. It may even lead to the potential rise of national-only software companies, somewhat reminiscent of the 1960s and 1970s with national hardware providers and service bureaus serving national governments.
+
+Organizations with multinational presence must assume that legislation around artificial intelligence across the globe is emerging but at an uneven pace: In the major economies, there has been for the last two years several efforts of exploratory efforts around policy and legislation. This is now, like in the EU, turning into actual policy and soon to be legislation.
+
+However, real policy and regulatory measures will vary substantially. Organizations, therefore, need to ensure global accountability for AI governance is in place and that it covers multinational regulatory and legal environments.
+
+HOW TO DEAL WITH THE REGULATORY AND LEGAL ENVIRONMENTS
+Here are a few recommendations for how multinational organizations deal with this legal and regulatory uncertainty.
+
+ESTABLISH CORPORATE GUIDELINES
+AI Governance is a board issue and more urgent in multinational organizations. The board and the CEO need to be active participants in establishing corporate guidelines for AI Governance.
+
+ROLES AND RESPONSIBILITY
+Every organization must have a single point of coordination around AI governance, especially in multinational organizations. A Chief Data Officer or the Chief Legal Officer are two roles that can be responsible for the global coordination.
+
+GLOBAL TECHNOLOGY PLATFORM
+The organization will need a global technology platform to manage all algorithms and the associate governance of AI. Without this, the likelihood of internal “fragmentation of AI” becomes disruptive to the organization as it will lack a consistent position with clients, suppliers, and employees around AI.
+
+LEGAL FUNCTIONS AND CAPABILITIES
+The legal function needs to upgrade capabilities to be able to manage issues of regulatory and judicial matters of AI and machine learning globally. This needs to be done through internal specialization in the legal department or working with external partners to gain ongoing input on changes in policies and laws.
+
+AI POLICIES AND EMPLOYEES
+The HR organization needs to acquire knowledge of how AI policies impact employees and their jobs or tasks differently across the legislative environments. A central point of expertise in the HR department will ensure consistent locally aware, global policies.
+
+IMPACT ON PRODUCTS, SERVICES, AND CLIENTS
+The Sales and Customer Service organizations will need to understand different legislative environments and AI governance that may impact the products and services and, ultimately, the interaction with the clients.
+
+As AI and machine learning increasingly face more but different regulations globally, multinational organizations need to increase their preparedness. Without this, internal as well as external challenges around AI Governance will persist for the next couple of years.

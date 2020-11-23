@@ -1,0 +1,2 @@
+tensorflow ==1.14.0
+gpt_2_simple
