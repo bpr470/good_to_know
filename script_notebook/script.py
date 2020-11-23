@@ -4,7 +4,7 @@ import sys
 import seaborn as sns
 from matplotlib import pyplot as plt
 
-df = pd.read_csv("PS_20174392719_1491204439457_log.csv", nrows=200)
+df = pd.read_csv("../author_algo/data/df.csv", nrows=200)
 
 class desciptives:
 
@@ -20,13 +20,13 @@ class desciptives:
 class plotting:
     
     def plot():
-        plt = sns.violinplot(x="type", y="newbalanceOrig", 
-                             hue="isFraud",
+        plt = sns.violinplot(x="type", y="id", 
+                             hue="age",
                split=True, inner="quart",
                data=df)
-        plt.figure.savefig('plt.png')
+        plt.figure.savefig('plt1.png')
     
     def plot_2():
-        plt = sns.scatterplot(x="oldbalanceOrg", y="newbalanceOrig", 
+        plt = sns.scatterplot(x="id", y="age", 
                               data=df)
-        plt.figure.savefig('plt.png')
+        plt.figure.savefig('data/plt2.png')
